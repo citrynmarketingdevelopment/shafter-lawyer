@@ -1,0 +1,15 @@
+# Normalize source files across Windows development and Vercel's Linux builds.
+* text=auto eol=lf
+
+# Preserve captured source formatting without reporting third-party whitespace.
+migration/source/** -whitespace linguist-vendored
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.pdf binary

@@ -1,0 +1,22 @@
+{
+  "verifiedAt": "2026-09-30T21:05:32.205Z",
+  "build": "passed",
+  "lint": "passed",
+  "typescript": "passed",
+  "unitTests": 24,
+  "browserChecks": {
+    "passed": 115,
+    "failures": 0,
+    "routes": 34
+  },
+  "lighthouseLocalMobile": {
+    "performance": 91,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "accessibilityNameCheck": null,
+  "liveSmtpDelivery": "not tested; credentials are placeholders",
+  "deployment": "not deployed",
+  "address": "400 Central Valley Hwy used consistently; source also lists 422 James St"
+}

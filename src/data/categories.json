@@ -1,0 +1,16 @@
+[
+  {
+    "id": 24,
+    "name": "Scott Winkler Blog",
+    "slug": "scott-winkler-blog",
+    "path": "/category/scott-winkler-blog/",
+    "count": 5
+  },
+  {
+    "id": 1,
+    "name": "Uncategorized",
+    "slug": "uncategorized",
+    "path": "/category/uncategorized/",
+    "count": 1
+  }
+]
