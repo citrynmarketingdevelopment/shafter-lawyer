@@ -1,0 +1,9 @@
+{
+  "confirmedAt": "2026-10-27T20:24:48.281Z",
+  "mailbox": "citryn.contactforms@gmail.com",
+  "confirmation": "Owner reported all three live test messages received.",
+  "realTurnstile": true,
+  "realServerHandler": true,
+  "realSMTPDelivery": true,
+  "secretValuesIncluded": false
+}

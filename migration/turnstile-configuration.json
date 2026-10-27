@@ -1,0 +1,16 @@
+{
+  "configuredAt": "2026-10-27T20:22:20.287Z",
+  "publicSiteKey": "0x4AAAAAAFhc4NSSEzyYFuix",
+  "secretKeyIncluded": false,
+  "pairedSecretVerifiedWithoutLogging": true,
+  "allowedMigrationHostnames": [
+    "theshafterlawyer.com",
+    "ruesgafarms.com",
+    "foundationpropertiesinc.com",
+    "shafter-lawyer.vercel.app",
+    "ruesga.vercel.app",
+    "foundation-inky-rho.vercel.app"
+  ],
+  "existingWidgetHostnamePreserved": "vznprints.com",
+  "rootDomainsAlsoCoverSubdomains": true
+}

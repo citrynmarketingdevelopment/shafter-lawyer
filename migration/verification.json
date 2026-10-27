@@ -1,6 +1,6 @@
 {
   "verifiedAt": "2026-10-27T19:55:25.104Z",
-  "buildId": "kz6OHeN7VhACQxMOZDE54",
+  "buildId": "s4K5hH8vNWG4QsHJZKtgj",
   "stack": "Next.js 16.4.3, React 19, TypeScript, vanilla CSS, Node.js 24",
   "typecheck": "passed",
   "lint": "passed",
@@ -26,10 +26,10 @@
   "sourceReferenceCaptures": 34,
   "wordPressRuntimeDependencies": [],
   "clientSecretScan": {
-    "checkedAt": "2026-10-27T18:50:45.753Z",
+    "checkedAt": "2026-10-27T20:25:18.068Z",
     "privateKeysChecked": 2,
-    "browserFilesChecked": 13,
-    "secretLeaks": 0
+    "secretLeaks": 0,
+    "publicSiteKeyIncluded": true
   },
   "forms": {
     "serverValidation": "passed",
@@ -37,8 +37,8 @@
     "turnstileServerTests": "passed",
     "smtpProviderAccepted": true,
     "recipient": "shafterlaw@gmail.com",
-    "inboxReceipt": "not verified",
-    "liveTurnstile": "blocked: matching public site key missing; production/preview widget hostnames must be configured",
+    "inboxReceipt": "Owner confirmed all three live test messages arrived in citryn.contactforms@gmail.com (CC).",
+    "liveTurnstile": "Real production browser challenges passed and live emails were received in the shared CC inbox.",
     "additionalRecipient": "citryn.contactforms@gmail.com",
     "copyDeliveryTest": {
       "checkedAt": "2026-10-27T19:50:33.473Z",
@@ -66,21 +66,26 @@
   "inaccessibleSourceAssets": [],
   "deployment": {
     "independentVercelApplication": true,
-    "deployed": false,
+    "deployed": true,
     "dnsChanged": false,
     "wordpressTakenOffline": false,
-    "launchBlockedBy": [
-      "Missing public Turnstile site key and hostname verification",
-      "Recipient inbox receipt not independently confirmed"
-    ]
+    "launchBlockedBy": []
   },
   "productionEnvironment": {
     "configured": true,
     "evidence": "migration/production-env-verification.json",
-    "missingPublicTurnstileKey": true
+    "missingPublicTurnstileKey": false
   },
   "crawlControls": {
     "sourceComparison": "migration/crawl-controls/comparison.json",
     "missingPublicSourceUrls": 0
+  },
+  "frontendVerificationRefreshRegression": {
+    "checkedAt": "2026-10-27T20:20:24.287Z",
+    "transport": "Mocked local browser test; no email delivered",
+    "verificationRefreshError": "300030",
+    "successConfirmationPreserved": true,
+    "newSubmissionShowsVerificationError": true,
+    "retryAllowsAnotherSubmission": true
   }
 }

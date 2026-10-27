@@ -4,14 +4,14 @@ import {contactHandler} from '../src/lib/secure-contact';
 import site from '../src/data/site.json';
 
 // Explicitly invoked mail test only. The deployed endpoint has no test bypass.
-// Cloudflare is simulated here because the matching public widget key is absent.
+// Cloudflare is simulated here to isolate the SMTP delivery path. Use the real browser form to test the complete production flow.
 async function main(){
   process.loadEnvFile('.env.local');
   const report:{[key:string]:unknown}={
     checkedAt:new Date().toISOString(),site:site.name,
     to:process.env.CONTACT_TO||site.email,cc:process.env.CONTACT_CC||'citryn.contactforms@gmail.com',
     transport:'Actual SMTP.com HTTPS API through the application contact handler',
-    turnstile:'Simulated within this local test harness only; live browser verification remains pending the public site key',
+    turnstile:'Simulated within this local mail-only test harness; production forms use real Cloudflare verification',
     inboxReceipt:'Not verified',
   };
   const transport:typeof fetch=async(input,options)=>{

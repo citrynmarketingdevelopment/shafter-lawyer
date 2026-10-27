@@ -13,16 +13,16 @@ Use Node.js 24 (see .nvmrc). Run `npm ci`, copy .env.example to .env.local for a
 - `npm start`: serve the production build.
 - `npm run verify`: Playwright checks against http://localhost:3000. Set TEST_BASE_URL to test another local origin. The audit uses installed Chrome on Windows; change the executable path or install Playwright Chromium on another OS.
 
-## Contact delivery and remaining launch requirement
+## Contact delivery and Turnstile
 
 Contact submissions POST to /api/contact/ in the Node.js runtime. Delivery uses the existing **SMTP.com HTTPS API**, because the reference configuration provides SMTP_API and SMTP_CHANNEL rather than SMTP username/password credentials. A sender authenticated by that account, contactforms@citryn.com, is used. The visitor's address is Reply-To. Every submission also copies citryn.contactforms@gmail.com (CONTACT_CC), while retaining the site's existing recipient. This avoids spoofing each business's domain. Submissions go to **shafterlaw@gmail.com**.
 
-**The public Turnstile site key is still missing.** Forms fail closed until it is configured. The existing secret was copied privately, but its matching public key and hostname allowlist could not be inferred. Set the public key for the matching Cloudflare widget, allow the production hostname and www variant if used, and add the specific Vercel preview hostname used for testing. Then rebuild and verify a real browser challenge and inbox receipt. Do not ship Cloudflare's testing keys.
+The matching public Turnstile Site Key and private server secret are configured in the Vercel production project. The Cloudflare widget allows the three business domains and their primary Vercel hostnames. Rebuild after changing NEXT_PUBLIC_TURNSTILE_SITE_KEY because it is embedded in the browser bundle. Add any additional preview hostname to the widget and the permitted server origins before testing there. Use Cloudflare testing keys for local browser fixtures; never deploy testing keys.
 
 | Variable | Purpose |
 | --- | --- |
 | NEXT_PUBLIC_SITE_URL | Canonical origin: https://theshafterlawyer.com |
-| NEXT_PUBLIC_TURNSTILE_SITE_KEY | Public widget key; currently missing |
+| NEXT_PUBLIC_TURNSTILE_SITE_KEY | Public widget Site Key; configured in Vercel production |
 | TURNSTILE_SECRET_KEY | Matching secret; server only |
 | SMTP_API | Existing SMTP.com API credential; server only |
 | SMTP_CHANNEL | Active SMTP.com channel; server only |
@@ -33,7 +33,7 @@ Contact submissions POST to /api/contact/ in the Node.js runtime. Delivery uses 
 
 Vercel's own VERCEL_URL and VERCEL_PROJECT_PRODUCTION_URL are recognized automatically. The API validates body size, fields, request origin, honeypot, Turnstile success, hostname and action. Turnstile's single-use tokens provide the primary replay protection. A bounded in-memory IP rate limit is supplementary and resets across serverless instances; use Vercel's platform rate controls if stronger global limits are needed. Errors never log credentials or submission contents. All provider calls have timeouts and no runtime filesystem access.
 
-One explicitly labeled migration test was accepted by SMTP.com for this recipient. Inbox delivery has not been independently confirmed. Browser loading/error/retry/success states were tested using mocked transport and a temporary public testing key; that testing key was removed afterward. See migration/mail-delivery-test.json and migration/form-ui-qa.json.
+One explicitly labeled migration test was accepted by SMTP.com for this recipient. The owner confirmed receipt of all three live production tests in citryn.contactforms@gmail.com. Browser loading/error/retry/success states were tested using mocked transport and a temporary public testing key; that testing key was removed afterward. See migration/mail-delivery-test.json and migration/form-ui-qa.json.
 
 ## Content and design maintenance
 
@@ -75,3 +75,7 @@ No inaccessible required source assets were found. No PDFs were discovered among
 robots.txt and sitemap.xml were compared with the live WordPress endpoints. Every indexable source URL remains; legacy development pages stay accessible with noindex and are intentionally excluded. Original source last-modified dates are preserved. See migration/crawl-controls/comparison.json and original-audit.json for exact differences. The new robots rules retain the source exclusions, block /api/, and point to a working HTTPS sitemap.
 
 CONTACT_CC=citryn.contactforms@gmail.com receives a copy of every form submission in addition to CONTACT_TO. One labeled test per site was sent through the actual contact handler and accepted by SMTP.com for both addresses. This local delivery harness simulates Cloudflare verification because the public widget Site Key is missing; it does not add a bypass to the deployed endpoint. Inbox receipt and a live browser challenge remain unconfirmed. See migration/contact-copy-delivery-test.json. To intentionally send another test, run npx tsx scripts/test-contact-delivery.ts; this sends a real email.
+
+## Verification refresh handling
+
+A background Turnstile refresh failure is shown separately from the submission result. A confirmed sent message remains confirmed even if the next challenge fails. Starting another submission clears the previous success state and requires fresh verification. Run node scripts/test-verification-refresh.mjs http://localhost:3000 against a local development server to exercise this regression using mocked transport; it sends no mail.

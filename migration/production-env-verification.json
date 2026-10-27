@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-27T19:55:24.094Z",
+  "checkedAt": "2026-10-27T20:22:20.291Z",
   "teamId": "team_03x1ngAC8mexBkAYzAJJnkMq",
   "projectId": "prj_RJugVv3sdIWAHrAFZGE0whtZSNPq",
   "project": "shafter-lawyer",
@@ -60,10 +60,15 @@
       "target": [
         "production"
       ]
+    },
+    {
+      "key": "NEXT_PUBLIC_TURNSTILE_SITE_KEY",
+      "type": "plain",
+      "target": [
+        "production"
+      ]
     }
   ],
-  "missingVariables": [
-    "NEXT_PUBLIC_TURNSTILE_SITE_KEY"
-  ],
+  "missingVariables": [],
   "secretValuesIncluded": false
 }
