@@ -1,0 +1,9 @@
+{
+  "site": "The Shafter Lawyer",
+  "recipient": "shafterlaw@gmail.com",
+  "checkedAt": "2026-10-27T18:20:42.819Z",
+  "test": "One explicitly labeled migration verification email",
+  "inboxReceipt": "Not verified",
+  "httpStatus": 200,
+  "providerAccepted": true
+}

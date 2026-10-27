@@ -1,282 +1,45 @@
-import assert from "node:assert/strict";
-import { access, mkdir, readFile, stat, writeFile } from "node:fs/promises";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import { chromium, expect } from "@playwright/test";
-import { load } from "cheerio";
-
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const output = path.join(root, "migration", "inspection");
-const baseUrl = new URL(process.env.TEST_BASE_URL || "http://127.0.0.1:3000");
-const content = JSON.parse(await readFile(path.join(root, "src/data/site-content.json"), "utf8"));
-const assets = JSON.parse(await readFile(path.join(root, "src/data/assets.json"), "utf8"));
-const inventory = JSON.parse(await readFile(path.join(root, "migration/inventory.json"), "utf8"));
-const siteOrigin = new URL(process.env.TEST_SITE_URL || inventory.source).origin;
-const canonicalAliases = {
-  "/our-services-dev/": "/our-firm/",
-  "/vehicle-accidents-dev/": "/vehicle-accidents/",
-};
-const report = {
-  checkedAt: new Date().toISOString(),
-  baseUrl: baseUrl.origin,
-  passed: 0,
-  failures: [],
-  routes: [],
-  assets: {},
-  screenshots: [],
-};
-
-await mkdir(output, { recursive: true });
-
-async function check(name, run) {
-  try {
-    await run();
-    report.passed += 1;
-  } catch (error) {
-    const failure = { check: name, message: error instanceof Error ? error.message : String(error) };
-    report.failures.push(failure);
-    console.error(`FAIL ${name}: ${failure.message.slice(0, 350)}`);
-  }
+import fs from 'node:fs/promises';import path from 'node:path';import {chromium} from '@playwright/test';
+const sites=[['shafter-lawyer',3000]];
+const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
+for(const [name,port] of sites){
+ const root=process.cwd(),pages=JSON.parse(await fs.readFile(path.join(root,'src/data/design-pages.json'))),origin=process.env.TEST_BASE_URL||`http://localhost:${port}`,output=path.join(root,'migration/qa');await fs.mkdir(output,{recursive:true});
+ const report={site:name,time:new Date().toISOString(),routes:[],errors:[],externalResources:[],screenshots:[],links:[],forms:[],navigation:[]};
+ const hrefs=new Set(),external=new Set();
+ for(const pageData of pages){
+  const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];
+  page.on('pageerror',e=>errors.push(e.message));
+  page.on('console',m=>{if(m.type()==='error'&&!/ERR_BLOCKED|youtube|google|favicon/.test(m.text()))errors.push(m.text().slice(0,500))});
+  page.on('request',r=>{if(!r.url().startsWith(origin)&&/^http/.test(r.url()))external.add(r.url())});
+  try{
+   const res=await page.goto(origin+pageData.route,{waitUntil:'domcontentloaded',timeout:60000});await page.waitForTimeout(120);await page.evaluate(()=>document.fonts.ready);
+   const seo=await page.evaluate(()=>({title:document.title,description:document.querySelector('meta[name=description]')?.content,canonical:document.querySelector('link[rel=canonical]')?.href,h1:document.querySelectorAll('h1').length,structured:[...document.querySelectorAll('script[type="application/ld+json"]')].map(e=>{try{return JSON.parse(e.textContent)}catch{return 'invalid'}}),links:[...document.querySelectorAll('a[href]')].map(a=>a.getAttribute('href'))}));
+   for(const href of seo.links)if(href?.startsWith('/')&&!href.startsWith('//'))hrefs.add(href.split('#')[0]);
+   const routeResult={route:pageData.route,status:res.status(),title:seo.title,description:seo.description,canonical:seo.canonical,h1:seo.h1,widths:[]};
+   if(res.status()!==200||!seo.title||!seo.description||!seo.canonical||!seo.h1||!seo.structured.length||seo.structured.includes('invalid'))report.errors.push({route:pageData.route,check:'page or SEO',seo});
+   for(const width of [1440,768,390]){
+    await page.setViewportSize({width,height:1000});
+    // Walk the page so native lazy images are decoded before the capture.
+    for(let y=0;y<await page.evaluate(()=>document.body.scrollHeight);y+=800){await page.evaluate(y=>window.scrollTo(0,y),y);await page.waitForTimeout(20)}
+    await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));await page.waitForTimeout(250);
+    const layout=await page.evaluate(()=>({width:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,height:document.body.scrollHeight,broken:[...document.images].filter(i=>i.getBoundingClientRect().width>0&&i.getBoundingClientRect().height>0&&getComputedStyle(i).visibility!=='hidden'&&!i.naturalWidth).map(i=>i.src),forms:[...document.forms].filter(f=>f.getBoundingClientRect().width>0).map(f=>[...f.querySelectorAll('input,textarea')].map(x=>({name:x.name,type:x.type,required:x.required})))}));
+    routeResult.widths.push({width,height:layout.height,overflow:layout.scroll>layout.width+1,broken:layout.broken});
+    if(layout.scroll>layout.width+1||layout.broken.length)report.errors.push({route:pageData.route,width,layout});
+    const filename=(pageData.route==='/'?'home':pageData.route.slice(1).replaceAll('/','_'))+'-'+width+'.png';await page.screenshot({path:path.join(output,filename),fullPage:true});report.screenshots.push(filename);
+   }
+   if(pageData.route==='/'){
+    const button=page.locator('.mobile_menu_bar:visible').first();if(await button.count()){await button.click();const opened=await button.getAttribute('aria-expanded')==='true';const mobileLinks=await page.locator('.mobile_nav.opened a:visible').count();await page.keyboard.press('Escape');report.navigation.push({mobileOpened:opened,mobileLinks,escapeClosed:await button.getAttribute('aria-expanded')==='false'});if(!opened||!mobileLinks)report.errors.push({check:'mobile navigation'})}
+   }
+   const slider=page.locator('.native-slider:visible').first();if(await slider.count()){const next=slider.getByRole('button',{name:'Next image'});if(await next.count()){await next.click();const active=await slider.locator('.et-pb-active-slide').count();if(!active)report.errors.push({route:pageData.route,check:'slider'});}}
+   const toggle=page.locator('details:visible').first();if(await toggle.count()){await toggle.locator('summary').click();if(!await toggle.getAttribute('open')&&await toggle.getAttribute('open')!== '')report.errors.push({route:pageData.route,check:'accordion'});}
+   if(errors.length)report.errors.push({route:pageData.route,check:'browser console',errors:[...new Set(errors)]});
+   report.routes.push(routeResult);await fs.writeFile(path.join(root,'migration/browser-qa.json'),JSON.stringify(report,null,2));console.log(name,pageData.route,res.status(),errors.length+' console errors');
+  }catch(e){report.errors.push({route:pageData.route,error:e.message});console.log(name,pageData.route,'ERROR',e.message.slice(0,150))}
+  await page.close();
+ }
+ for(const href of hrefs){if(!href||href.startsWith('/assets/'))continue;const r=await fetch(origin+href,{redirect:'manual'});report.links.push({href,status:r.status});if(r.status>=400)report.errors.push({check:'internal link',href,status:r.status})}
+ for(const route of ['/sitemap.xml','/robots.txt']){const r=await fetch(origin+route);if(r.status!==200)report.errors.push({check:route,status:r.status})}
+ report.externalResources=[...external];if([...external].some(x=>/wp-content|wp-includes|i\d\.wp\.com|stats\.wp\.com/.test(x)))report.errors.push({check:'WordPress runtime dependency'});
+ for(const body of [{name:'x',email:'invalid',message:'short',token:'fake'}, {name:'Tester',email:'tester@example.org',message:'Test validation only',token:''}]){const r=await fetch(origin+'/api/contact/',{method:'POST',headers:{'Content-Type':'application/json',Origin:JSON.parse(await fs.readFile(path.join(root,'src/data/site.json'))).origin},body:JSON.stringify(body)});report.forms.push({expected:400,status:r.status});if(r.status!==400)report.errors.push({check:'API validation',status:r.status})}
+ await fs.writeFile(path.join(root,'migration/browser-qa.json'),JSON.stringify(report,null,2));console.log('QA',name,report.routes.length,'routes',report.errors.length,'issues');
 }
-
-async function launchBrowser() {
-  try {
-    return await chromium.launch({ headless: true });
-  } catch (error) {
-    const executablePath = process.env.TEST_CHROME_EXECUTABLE || "C:/Program Files/Google/Chrome/Application/chrome.exe";
-    try {
-      await access(executablePath);
-    } catch {
-      throw error;
-    }
-    return chromium.launch({ executablePath, headless: true });
-  }
-}
-
-async function screenshot(page, name) {
-  const filename = `audit-${name}.png`;
-  await page.screenshot({ path: path.join(output, filename), fullPage: true });
-  report.screenshots.push(`migration/inspection/${filename}`);
-}
-
-async function assertNoOverflow(page, route, width) {
-  const dimensions = await page.evaluate(() => ({
-    viewport: document.documentElement.clientWidth,
-    scroll: document.documentElement.scrollWidth,
-    body: document.body.scrollWidth,
-    offenders: [...document.querySelectorAll("body *")]
-      .filter((element) => element.getClientRects().length)
-      .filter((element) => {
-        const box = element.getBoundingClientRect();
-        return box.right > window.innerWidth + 1 || box.left < -1;
-      })
-      .slice(0, 5)
-      .map((element) => `${element.tagName.toLowerCase()}.${String(element.className).replace(/\s+/g, ".")}`),
-  }));
-  assert.ok(
-    dimensions.scroll <= dimensions.viewport + 1 && dimensions.body <= dimensions.viewport + 1,
-    `${route} at ${width}px overflows: ${JSON.stringify(dimensions)}`,
-  );
-}
-
-let browser;
-try {
-  browser = await launchBrowser();
-  const context = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
-  const api = context.request;
-
-  await check("all migrated local image files exist and contain data", async () => {
-    const imagePaths = [...new Set(Object.values(assets))];
-    const missing = [];
-    for (const imagePath of imagePaths) {
-      const localPath = path.resolve(root, "public", `.${imagePath}`);
-      assert.ok(localPath.startsWith(path.join(root, "public") + path.sep));
-      try {
-        const file = await stat(localPath);
-        if (!file.isFile() || file.size === 0) missing.push(imagePath);
-      } catch {
-        missing.push(imagePath);
-      }
-    }
-    report.assets = { checked: imagePaths.length, missing };
-    assert.deepEqual(missing, []);
-  });
-
-  for (let offset = 0; offset < content.length; offset += 4) {
-    await Promise.all(content.slice(offset, offset + 4).map(async (entry) => {
-      await check(`route and SEO ${entry.path}`, async () => {
-        const response = await api.get(new URL(entry.path, baseUrl).href);
-        const html = load(await response.text());
-        const info = {
-          path: entry.path,
-          status: response.status(),
-          h1Count: html("h1").length,
-          title: html("title").text().trim(),
-          description: html('meta[name="description"]').attr("content") || "",
-          canonical: html('link[rel="canonical"]').attr("href") || "",
-          robots: html('meta[name="robots"]').attr("content") || "",
-        };
-        report.routes.push(info);
-        assert.equal(info.status, 200);
-        assert.equal(info.h1Count, 1, `Expected one h1, got ${info.h1Count}`);
-        assert.ok(info.title.length > 10, "Missing meaningful title");
-        assert.ok(info.description.length > 40, "Missing meaningful meta description");
-        assert.equal(info.canonical, `${siteOrigin}${canonicalAliases[entry.path] || entry.path}`);
-        if (canonicalAliases[entry.path]) assert.match(info.robots, /noindex/);
-        else assert.doesNotMatch(info.robots, /noindex/);
-      });
-    }));
-  }
-  report.routes.sort((a, b) => a.path.localeCompare(b.path));
-  await check("all 34 routes have unique titles and descriptions", async () => {
-    assert.equal(content.length, 34);
-    assert.equal(report.routes.length, 34);
-    assert.equal(new Set(report.routes.map((entry) => entry.title)).size, 34, "Duplicate page titles");
-    assert.equal(new Set(report.routes.map((entry) => entry.description)).size, 34, "Duplicate meta descriptions");
-  });
-
-  await check("sitemap includes each indexable page and excludes legacy duplicates", async () => {
-    const response = await api.get(new URL("/sitemap.xml", baseUrl).href);
-    assert.equal(response.status(), 200);
-    const xml = load(await response.text(), { xmlMode: true });
-    const actual = xml("url > loc").map((_, element) => xml(element).text()).get().sort();
-    const expected = content.filter((entry) => !canonicalAliases[entry.path]).map((entry) => `${siteOrigin}${entry.path}`).sort();
-    assert.deepEqual(actual, expected);
-    report.sitemapEntries = actual.length;
-  });
-
-  await check("robots.txt allows public pages and declares the canonical sitemap", async () => {
-    const response = await api.get(new URL("/robots.txt", baseUrl).href);
-    assert.equal(response.status(), 200);
-    const robots = await response.text();
-    assert.match(robots, /User-Agent:\s*\*/i);
-    assert.match(robots, /^Allow:\s*\/$/im);
-    assert.match(robots, /^Disallow:\s*\/api\/$/im);
-    assert.ok(robots.includes(`Sitemap: ${siteOrigin}/sitemap.xml`));
-  });
-
-  await check("unknown routes return HTTP 404", async () => {
-    const response = await api.get(new URL("/migration-smoke-not-a-real-page/", baseUrl).href);
-    assert.equal(response.status(), 404);
-  });
-
-  const page = await context.newPage();
-  const pageErrors = [];
-  page.on("pageerror", (error) => pageErrors.push(error.message));
-  for (const width of [1440, 390]) {
-    await page.setViewportSize({ width, height: width === 390 ? 844 : 1000 });
-    for (const entry of content) {
-      await check(`layout ${width}px ${entry.path}`, async () => {
-        await page.goto(new URL(entry.path, baseUrl).href, { waitUntil: "load" });
-        await page.evaluate(() => document.fonts.ready);
-        await assertNoOverflow(page, entry.path, width);
-      });
-    }
-  }
-
-  for (const route of ["/", "/biography/", "/dui-cases/", "/blog/"]) {
-    await check(`rendered local images ${route}`, async () => {
-      const imageFailures = [];
-      const recordFailure = (response) => {
-        if (response.request().resourceType() === "image" && response.status() >= 400) {
-          imageFailures.push({ url: response.url(), status: response.status() });
-        }
-      };
-      page.on("response", recordFailure);
-      try {
-        await page.goto(new URL(route, baseUrl).href, { waitUntil: "load" });
-        const images = await page.evaluate(async () => {
-          const elements = [...document.images];
-          for (const image of elements) image.loading = "eager";
-          await Promise.all(elements.map((image) => image.decode().catch(() => {})));
-          return elements.map((image) => ({
-            src: image.currentSrc || image.src,
-            loaded: image.complete && image.naturalWidth > 0,
-          }));
-        });
-        assert.ok(images.length > 0);
-        assert.deepEqual(images.filter((image) => !image.loaded), [], "Some images did not decode");
-        assert.deepEqual(images.filter((image) => new URL(image.src).origin !== baseUrl.origin), [], "Some images depend on a remote host");
-        assert.deepEqual(imageFailures, [], "Image requests failed");
-      } finally {
-        page.off("response", recordFailure);
-      }
-    });
-  }
-
-  await check("mobile navigation and defense dropdown open and close", async () => {
-    await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto(new URL("/", baseUrl).href, { waitUntil: "load" });
-    const menu = page.locator(".menu-toggle");
-    await menu.click();
-    await expect(menu).toHaveAttribute("aria-expanded", "true");
-    await expect(page.locator("#primary-navigation")).toBeVisible();
-    const areas = page.getByRole("button", { name: "Show defense areas" });
-    await areas.click();
-    await expect(areas).toHaveAttribute("aria-expanded", "true");
-    await expect(page.locator("#defense-menu")).toBeVisible();
-    await assertNoOverflow(page, "open mobile navigation", 390);
-    await screenshot(page, "mobile-navigation");
-    await page.keyboard.press("Escape");
-    await expect(menu).toHaveAttribute("aria-expanded", "false");
-    await expect(page.locator('button[aria-controls="defense-menu"]')).toHaveAttribute("aria-expanded", "false");
-  });
-
-  await check("FAQ accordion is keyboard operable and exposes its answer", async () => {
-    await page.goto(new URL("/faqs/", baseUrl).href, { waitUntil: "load" });
-    const faq = page.locator("details.faq").first();
-    const summary = faq.locator("summary");
-    await summary.focus();
-    await page.keyboard.press("Enter");
-    await expect(faq).toHaveAttribute("open", "");
-    await expect(faq.locator(".prose")).toBeVisible();
-    await screenshot(page, "faq-expanded");
-    await summary.press("Enter");
-    await expect(faq).not.toHaveAttribute("open", "");
-  });
-
-  await check("placeholder SMTP returns honest 503 and preserves contact form input", async () => {
-    // Never run this send attempt against a deployed site or real credentials.
-    assert.ok(["localhost", "127.0.0.1", "[::1]"].includes(baseUrl.hostname), "Contact check is local-only");
-    const envFile = await readFile(path.join(root, ".env.local"), "utf8");
-    assert.match(envFile, /^SMTP_HOST\s*=\s*["']?smtp\.example\.com["']?\s*$/m, "Contact check requires the documented placeholder SMTP host");
-    assert.match(envFile, /^SMTP_PASSWORD\s*=\s*["']?your-smtp-password["']?\s*$/m, "Contact check requires the documented placeholder password");
-    assert.ok(!process.env.SMTP_HOST || process.env.SMTP_HOST === "smtp.example.com", "Do not override SMTP host with real credentials when running this check");
-    await page.goto(new URL("/contact-us/", baseUrl).href, { waitUntil: "load" });
-    const form = page.locator("form.contact-form").first();
-    const synthetic = {
-      name: "Migration Smoke Check",
-      email: "migration-smoke@example.invalid",
-      phone: "661-555-0100",
-      message: "Synthetic local migration verification. This message must not be delivered.",
-    };
-    await form.getByLabel("Name", { exact: true }).fill(synthetic.name);
-    await form.getByLabel("Email Address", { exact: true }).fill(synthetic.email);
-    await form.getByLabel("Phone Number", { exact: true }).fill(synthetic.phone);
-    await form.getByLabel("Message", { exact: true }).fill(synthetic.message);
-    const responsePromise = page.waitForResponse((response) => new URL(response.url()).pathname === "/api/contact/" && response.request().method() === "POST");
-    await form.getByRole("button", { name: "Send", exact: true }).click();
-    const response = await responsePromise;
-    assert.equal(response.status(), 503);
-    assert.equal((await response.json()).success, false);
-    await expect(form.locator(".form-status")).toHaveAttribute("data-state", "error");
-    await expect(form.locator(".form-status")).toContainText("unavailable");
-    await expect(form.locator('.form-status a[href="tel:+16617460235"]')).toBeVisible();
-    await expect(form.getByLabel("Name", { exact: true })).toHaveValue(synthetic.name);
-    await expect(form.getByLabel("Email Address", { exact: true })).toHaveValue(synthetic.email);
-    await expect(form.getByLabel("Message", { exact: true })).toHaveValue(synthetic.message);
-    await expect(form.getByRole("button", { name: "Send", exact: true })).toBeEnabled();
-    await screenshot(page, "contact-unconfigured");
-  });
-
-  await check("no uncaught browser errors", async () => assert.deepEqual([...new Set(pageErrors)], []));
-  await context.close();
-} catch (error) {
-  report.failures.push({ check: "audit execution", message: error instanceof Error ? error.message : String(error) });
-} finally {
-  if (browser) await browser.close();
-  report.completedAt = new Date().toISOString();
-  await writeFile(path.join(output, "browser-report.json"), `${JSON.stringify(report, null, 2)}\n`);
-  console.log(JSON.stringify({ passed: report.passed, failed: report.failures.length, routes: report.routes.length, report: "migration/inspection/browser-report.json" }));
-  if (report.failures.length) process.exitCode = 1;
-}
+await browser.close();

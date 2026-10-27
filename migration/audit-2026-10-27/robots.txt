@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /*?s=*/
+
+Sitemap: https://theshafterlawyer.com/sitemap_index.xml

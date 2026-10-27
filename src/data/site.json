@@ -1,0 +1,14 @@
+{
+  "name": "The Shafter Lawyer",
+  "origin": "https://theshafterlawyer.com",
+  "email": "shafterlaw@gmail.com",
+  "type": "LegalService",
+  "phone": "+1-661-746-0235",
+  "address": "400 Central Valley Hwy",
+  "city": "Shafter",
+  "region": "CA",
+  "postal": "93263",
+  "description": "The Law Offices of B. Scott Winkler in Shafter, CA. Criminal defense, family law, civil litigation and personal injury representation.",
+  "icon": "/assets/5698fe18-5936-4e28-b0f3-e61909d59d2d-465d01e831.jpg",
+  "socialImage": "/assets/New-Web-Wihte-Logo-a8cfe94feb.png"
+}

@@ -1,0 +1,1329 @@
+{
+  "site": "shafter-lawyer",
+  "time": "2026-10-27T18:52:39.393Z",
+  "routes": [
+    {
+      "route": "/vehicle-accidents-dev/",
+      "status": 200,
+      "title": "Vehicle Accident Page Archive | The Shafter Lawyer",
+      "description": "An archived vehicle accident page from the Law Offices of B. Scott Winkler, with information for people injured in Shafter and Bakersfield vehicle accidents.",
+      "canonical": "https://theshafterlawyer.com/vehicle-accidents/",
+      "h1": 3,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 2810,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 3571,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 4450,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/our-services-dev/",
+      "status": 200,
+      "title": "Our Services Archive | The Shafter Lawyer",
+      "description": "An archived services page from the Law Offices of B. Scott Winkler, including the attorney's Kern County background and approach to legal representation.",
+      "canonical": "https://theshafterlawyer.com/our-firm/",
+      "h1": 1,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 2850,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 3601,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 4034,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/blog/",
+      "status": 200,
+      "title": "B. Scott Winkler's Legal Blog | The Shafter Lawyer",
+      "description": "Read B. Scott Winkler's articles and reflections on criminal defense, Miranda rights, DUI awareness and everyday life from the Shafter Lawyer blog.",
+      "canonical": "https://theshafterlawyer.com/blog/",
+      "h1": 1,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 4746,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 4636,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 5024,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/disclaimer/",
+      "status": 200,
+      "title": "Website Legal Disclaimer | The Shafter Lawyer",
+      "description": "Read the Law Offices of B. Scott Winkler website disclaimer about general information, legal advice and the creation of an attorney-client relationship.",
+      "canonical": "https://theshafterlawyer.com/disclaimer/",
+      "h1": 1,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 1000,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 1000,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/biography/",
+      "status": 200,
+      "title": "Attorney B. Scott Winkler's Biography | The Shafter Lawyer",
+      "description": "Read B. Scott Winkler's personal story and the family experience that inspired him to pursue law and help people seeking legal representation in Kern County.",
+      "canonical": "https://theshafterlawyer.com/biography/",
+      "h1": 1,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 5243,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 8067,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 9122,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/industrial-accident/",
+      "status": 200,
+      "title": "Industrial Accident Lawyer in Shafter | B. Scott Winkler",
+      "description": "Discuss industrial injuries involving workplace equipment, falls and other accidents with Shafter attorney B. Scott Winkler. Free initial consultations.",
+      "canonical": "https://theshafterlawyer.com/industrial-accident/",
+      "h1": 3,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 3825,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 5850,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 6354,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/oilfield-accidents/",
+      "status": 200,
+      "title": "Oilfield Accident Lawyer in Shafter | B. Scott Winkler",
+      "description": "B. Scott Winkler assists people affected by oilfield accidents in Shafter, Bakersfield and surrounding areas. Request a free consultation about your injury.",
+      "canonical": "https://theshafterlawyer.com/oilfield-accidents/",
+      "h1": 3,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 3630,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 5780,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 6090,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/vehicle-accidents/",
+      "status": 200,
+      "title": "Vehicle Accident Lawyer in Shafter | B. Scott Winkler",
+      "description": "Injured in a vehicle accident in Shafter or Bakersfield? Discuss your injury, medical expenses and property damage with attorney B. Scott Winkler.",
+      "canonical": "https://theshafterlawyer.com/vehicle-accidents/",
+      "h1": 3,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 4109,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 5258,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 5837,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/restraining-orders/",
+      "status": 200,
+      "title": "Restraining Order Lawyer in Shafter | B. Scott Winkler",
+      "description": "Find representation for domestic violence and civil harassment restraining order matters in Shafter. Contact B. Scott Winkler for a free consultation.",
+      "canonical": "https://theshafterlawyer.com/restraining-orders/",
+      "h1": 3,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 3612,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 5920,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 6776,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/child-support/",
+      "status": 200,
+      "title": "Child Support Lawyer in Shafter, CA | B. Scott Winkler",
+      "description": "Discuss child support and parental responsibilities with B. Scott Winkler, a family law attorney serving Shafter and Kern County. Free initial consultation.",
+      "canonical": "https://theshafterlawyer.com/child-support/",
+      "h1": 3,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 3667,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 5833,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 6687,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/child-visitations/",
+      "status": 200,
+      "title": "Child Visitation Lawyer in Shafter | B. Scott Winkler",
+      "description": "Learn about scheduled, reasonable and supervised child visitation. Contact Shafter family law attorney B. Scott Winkler to discuss your parenting arrangement.",
+      "canonical": "https://theshafterlawyer.com/child-visitations/",
+      "h1": 2,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 3800,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 5603,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 6827,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/child-custody/",
+      "status": 200,
+      "title": "Child Custody Lawyer in Shafter, CA | B. Scott Winkler",
+      "description": "Get help with your child custody matter in Shafter and Kern County. B. Scott Winkler offers an initial consultation to discuss your family and legal needs.",
+      "canonical": "https://theshafterlawyer.com/child-custody/",
+      "h1": 2,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 3429,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 5543,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 6048,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/misdemeanors/",
+      "status": 200,
+      "title": "Misdemeanor Defense in Shafter, CA | B. Scott Winkler",
+      "description": "Learn about misdemeanor defense for DUI, theft, driving and other charges in Shafter. Speak with attorney B. Scott Winkler about your individual situation.",
+      "canonical": "https://theshafterlawyer.com/misdemeanors/",
+      "h1": 2,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 3584,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 5683,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 5976,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/felony-charges/",
+      "status": 200,
+      "title": "Felony Defense Lawyer in Shafter, CA | B. Scott Winkler",
+      "description": "Facing a felony charge in Kern County? Learn about criminal defense representation from Shafter attorney B. Scott Winkler and request a free consultation.",
+      "canonical": "https://theshafterlawyer.com/felony-charges/",
+      "h1": 2,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 3708,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 6129,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 6640,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/dmv-hearings/",
+      "status": 200,
+      "title": "DMV Hearing Lawyer in Shafter, CA | B. Scott Winkler",
+      "description": "B. Scott Winkler represents Shafter and Kern County clients in DMV DUI hearings involving driving privileges. Contact the firm for a free consultation.",
+      "canonical": "https://theshafterlawyer.com/dmv-hearings/",
+      "h1": 2,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 3437,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 5621,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 6009,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/dui-cases/",
+      "status": 200,
+      "title": "DUI Defense Lawyer in Shafter, CA | B. Scott Winkler",
+      "description": "Discuss your DUI charge with Shafter attorney B. Scott Winkler. Learn about the firm's approach to DUI defense and request a free initial consultation.",
+      "canonical": "https://theshafterlawyer.com/dui-cases/",
+      "h1": 2,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 3505,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 5650,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 6351,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/defense-areas/",
+      "status": 200,
+      "title": "Defense & Practice Areas in Shafter | B. Scott Winkler",
+      "description": "Explore legal representation for DUI, felony and misdemeanor charges, family law, and vehicle, oilfield and industrial accidents in Shafter and Kern County.",
+      "canonical": "https://theshafterlawyer.com/defense-areas/",
+      "h1": 1,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 4530,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 7038,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 7149,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/contact-us/",
+      "status": 200,
+      "title": "Contact B. Scott Winkler | Shafter Lawyer Consultation",
+      "description": "Call (661) 746-0235 or contact B. Scott Winkler for a free initial consultation. Visit the law office at 400 Central Valley Hwy, Shafter, CA 93263.",
+      "canonical": "https://theshafterlawyer.com/contact-us/",
+      "h1": 2,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 4311,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 6184,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 6834,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/faqs/",
+      "status": 200,
+      "title": "Criminal Defense & DUI FAQs | The Shafter Lawyer",
+      "description": "Read the firm's answers to common questions about criminal defense, DUI arrests, plea bargains and hiring an attorney. Contact B. Scott Winkler in Shafter.",
+      "canonical": "https://theshafterlawyer.com/faqs/",
+      "h1": 1,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 2777,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 3948,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 4214,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/case-results/",
+      "status": 200,
+      "title": "Criminal Defense Case Results | B. Scott Winkler",
+      "description": "Read selected criminal defense case results from the Law Offices of B. Scott Winkler, including DUI, felony and misdemeanor matters in Kern County.",
+      "canonical": "https://theshafterlawyer.com/case-results/",
+      "h1": 1,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 9413,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 15185,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 16073,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/our-firm/",
+      "status": 200,
+      "title": "Our Shafter Law Firm | B. Scott Winkler",
+      "description": "Learn about the Law Offices of B. Scott Winkler, a Shafter law firm serving Kern County with criminal defense, family law and personal injury representation.",
+      "canonical": "https://theshafterlawyer.com/our-firm/",
+      "h1": 1,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 8686,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 13825,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 13652,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "title": "Shafter Criminal Defense & Family Lawyer | B. Scott Winkler",
+      "description": "B. Scott Winkler represents clients in criminal defense, family law and personal injury matters in Shafter and Kern County. Request a free consultation.",
+      "canonical": "https://theshafterlawyer.com/",
+      "h1": 1,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 5888,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 9381,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 8755,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/tis-season-not-drink-drive/",
+      "status": 200,
+      "title": "'Tis the Season to Not Drink & Drive | B. Scott Winkler",
+      "description": "B. Scott Winkler reflects on the dangers of impaired driving, the impact on families and planning a safe ride home during the holiday season.",
+      "canonical": "https://theshafterlawyer.com/tis-season-not-drink-drive/",
+      "h1": 1,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 1529,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 2541,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 3591,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/thank-veterans-united-states/",
+      "status": 200,
+      "title": "Thank You to America's Veterans | B. Scott Winkler",
+      "description": "The Law Offices of B. Scott Winkler shares a Veterans Day message honoring past and present service members and the families who support them.",
+      "canonical": "https://theshafterlawyer.com/thank-veterans-united-states/",
+      "h1": 2,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 1110,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 1959,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 2473,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/miranda-rights/",
+      "status": 200,
+      "title": "Do You Know Your Miranda Rights? | B. Scott Winkler",
+      "description": "Read B. Scott Winkler's article about Miranda warnings, the right to remain silent, the right to an attorney and the history behind those protections.",
+      "canonical": "https://theshafterlawyer.com/miranda-rights/",
+      "h1": 1,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 2342,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 3261,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 4512,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/arrested/",
+      "status": 200,
+      "title": "Arrested? Do Not Do These 3 Things | B. Scott Winkler",
+      "description": "B. Scott Winkler discusses common mistakes after an arrest, police encounters and why a person's words and actions can affect their criminal defense.",
+      "canonical": "https://theshafterlawyer.com/arrested/",
+      "h1": 3,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 2562,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 3481,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 5155,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/introduction/",
+      "status": 200,
+      "title": "Introducing the Shafter Lawyer Blog | B. Scott Winkler",
+      "description": "Meet B. Scott Winkler through his first blog post about practicing law in Kern County and sharing candid perspectives on the law and everyday life.",
+      "canonical": "https://theshafterlawyer.com/introduction/",
+      "h1": 1,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 1785,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 1709,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 2285,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/category/scott-winkler-blog/",
+      "status": 200,
+      "title": "Scott Winkler Blog Archives | The Shafter Lawyer",
+      "description": "Browse the Scott Winkler Blog archive for articles on arrests, Miranda rights, impaired driving and personal reflections from the Shafter attorney.",
+      "canonical": "https://theshafterlawyer.com/category/scott-winkler-blog/",
+      "h1": 1,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 2847,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 3184,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 3186,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/category/uncategorized/",
+      "status": 200,
+      "title": "Uncategorized Article Archive | The Shafter Lawyer",
+      "description": "Browse the original uncategorized article archive from the Shafter Lawyer, including B. Scott Winkler's discussion of common mistakes after an arrest.",
+      "canonical": "https://theshafterlawyer.com/category/uncategorized/",
+      "h1": 1,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 1076,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 1579,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 1486,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/2017/08/",
+      "status": 200,
+      "title": "August 2017 Blog Archive | The Shafter Lawyer",
+      "description": "Read the August 2017 Shafter Lawyer articles: B. Scott Winkler introduces his legal blog and discusses three common mistakes people make after an arrest.",
+      "canonical": "https://theshafterlawyer.com/2017/08/",
+      "h1": 1,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 1683,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 2187,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 2020,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/2017/09/",
+      "status": 200,
+      "title": "September 2017 Blog Archive | The Shafter Lawyer",
+      "description": "Explore the September 2017 blog archive featuring B. Scott Winkler's article on Miranda rights, the right to remain silent and the right to an attorney.",
+      "canonical": "https://theshafterlawyer.com/2017/09/",
+      "h1": 1,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 1076,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 1579,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 1486,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/2017/11/",
+      "status": 200,
+      "title": "November 2017 Blog Archive | The Shafter Lawyer",
+      "description": "Visit the November 2017 archive for the Law Offices of B. Scott Winkler's Veterans Day tribute to military service members and their families.",
+      "canonical": "https://theshafterlawyer.com/2017/11/",
+      "h1": 1,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 1076,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 1165,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 1277,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/2017/12/",
+      "status": 200,
+      "title": "December 2017 Blog Archive | The Shafter Lawyer",
+      "description": "Browse the December 2017 Shafter Lawyer archive for B. Scott Winkler's holiday reflection on impaired driving, family safety and arranging a safe ride home.",
+      "canonical": "https://theshafterlawyer.com/2017/12/",
+      "h1": 1,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 1076,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 1165,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 1261,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    },
+    {
+      "route": "/author/theshafterlawyer007/",
+      "status": 200,
+      "title": "Articles by B. Scott Winkler | The Shafter Lawyer",
+      "description": "Explore B. Scott Winkler's collected articles about arrests, Miranda rights, driving safety and personal reflections from his law practice in Kern County.",
+      "canonical": "https://theshafterlawyer.com/author/theshafterlawyer007/",
+      "h1": 1,
+      "widths": [
+        {
+          "width": 1440,
+          "height": 2847,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 768,
+          "height": 3184,
+          "overflow": false,
+          "broken": []
+        },
+        {
+          "width": 390,
+          "height": 3186,
+          "overflow": false,
+          "broken": []
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "externalResources": [
+    "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12992.277995398315!2d-119.2759766!3d35.5025597!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ea5700f2dbbe4f%3A0x9ddbe21c100e02c!2sLaw%20Offices%20of%20B.%20Scott%20Winkler!5e0!3m2!1sen!2sus!4v1706735818788!5m2!1sen!2sus",
+    "https://maps.gstatic.com/maps-api-v3/embed/js/66/11a/init_embed.js",
+    "https://maps.googleapis.com/maps/api/js?key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&paint_origin=&libraries=geometry,search&v=weekly&loading=async&language=en&region=us&experimentation=allowed&callback=onApiLoad",
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/11a/search.js",
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/11a/geometry.js",
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/11a/main.js",
+    "https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true",
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/11a/common.js",
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/11a/util.js",
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/11a/map.js",
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/11a/controls.js",
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/11a/places_impl.js",
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/11a/places.js",
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/11a/onion.js",
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/11a/search_impl.js",
+    "https://maps.gstatic.com/mapfiles/openhand_8_8.cur",
+    "https://maps.googleapis.com/maps-api-v3/api/js/66/11a/log.js",
+    "https://fonts.googleapis.com/css?family=Google+Sans+Text:400&text=%E2%86%90%E2%86%92%E2%86%91%E2%86%93&lang=en",
+    "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700|Google+Sans+Text:400,500,700&lang=en",
+    "https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetViewportInfo",
+    "https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/InitMapsJwt",
+    "https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetPlaceWidgetMetadata",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5527!3i12923!4i256!2m3!1e0!2sm!3i801567056!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=13417",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5526!3i12923!4i256!2m3!1e0!2sm!3i801567056!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=14710",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5526!3i12922!4i256!2m3!1e0!2sm!3i801566426!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=125177",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5527!3i12922!4i256!2m3!1e0!2sm!3i801566426!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=123884",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5528!3i12922!4i256!2m3!1e0!2sm!3i801566426!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=122591",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5528!3i12923!4i256!2m3!1e0!2sm!3i801566426!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=94666",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5528!3i12924!4i256!2m3!1e0!2sm!3i801566246!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=100098",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5527!3i12924!4i256!2m3!1e0!2sm!3i801567056!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=116563",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5526!3i12924!4i256!2m3!1e0!2sm!3i801567056!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=117856",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5525!3i12924!4i256!2m3!1e0!2sm!3i801567056!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=119149",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5525!3i12923!4i256!2m3!1e0!2sm!3i801567056!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=16003",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5525!3i12922!4i256!2m3!1e0!2sm!3i801566246!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=28756",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5525!3i12921!4i256!2m3!1e0!2sm!3i801566246!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=56681",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5526!3i12921!4i256!2m3!1e0!2sm!3i801566426!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=22031",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5527!3i12921!4i256!2m3!1e0!2sm!3i801566426!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=20738",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5528!3i12921!4i256!2m3!1e0!2sm!3i801566426!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=19445",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5529!3i12921!4i256!2m3!1e0!2sm!3i801565184!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=85254",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5529!3i12922!4i256!2m3!1e0!2sm!3i801566246!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=23584",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5529!3i12923!4i256!2m3!1e0!2sm!3i801566246!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=126730",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5529!3i12924!4i256!2m3!1e0!2sm!3i801566246!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=98805",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5524!3i12924!4i256!2m3!1e0!2sm!3i801566246!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=105270",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5524!3i12923!4i256!2m3!1e0!2sm!3i801565184!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=35869",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5524!3i12922!4i256!2m3!1e0!2sm!3i801565202!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=28676",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5524!3i12921!4i256!2m3!1e0!2sm!3i801565202!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=56601",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5530!3i12921!4i256!2m3!1e0!2sm!3i801565184!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=89501",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5530!3i12922!4i256!2m3!1e0!2sm!3i801565184!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=61576",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5530!3i12923!4i256!2m3!1e0!2sm!3i801565184!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=33651",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i5530!3i12924!4i256!2m3!1e0!2sm!3i801566426!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=69695",
+    "https://www.google.com/maps/vt?pb=!1m4!1m3!1i15!2i5524!3i12921!1m4!1m3!1i15!2i5525!3i12921!1m4!1m3!1i15!2i5524!3i12922!1m4!1m3!1i15!2i5524!3i12923!1m4!1m3!1i15!2i5525!3i12922!1m4!1m3!1i15!2i5525!3i12923!1m4!1m3!1i15!2i5526!3i12921!1m4!1m3!1i15!2i5527!3i12921!1m4!1m3!1i15!2i5526!3i12922!1m4!1m3!1i15!2i5526!3i12923!1m4!1m3!1i15!2i5527!3i12922!1m4!1m3!1i15!2i5527!3i12923!2m3!1e0!2sm!3i801567056!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e3!12m2!5b1!6b1!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=11359",
+    "https://www.google.com/maps/vt?pb=!1m4!1m3!1i15!2i5524!3i12924!1m4!1m3!1i15!2i5525!3i12924!1m4!1m3!1i15!2i5526!3i12924!1m4!1m3!1i15!2i5527!3i12924!1m4!1m3!1i15!2i5528!3i12921!1m4!1m3!1i15!2i5529!3i12921!1m4!1m3!1i15!2i5528!3i12922!1m4!1m3!1i15!2i5528!3i12923!1m4!1m3!1i15!2i5529!3i12922!1m4!1m3!1i15!2i5529!3i12923!1m4!1m3!1i15!2i5530!3i12921!1m4!1m3!1i15!2i5530!3i12922!2m3!1e0!2sm!3i801567056!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e3!12m2!5b1!6b1!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=46926",
+    "https://www.google.com/maps/vt?pb=!1m4!1m3!1i15!2i5530!3i12923!1m4!1m3!1i15!2i5528!3i12924!1m4!1m3!1i15!2i5529!3i12924!1m4!1m3!1i15!2i5530!3i12924!2m3!1e0!2sm!3i801567056!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e3!12m2!5b1!6b1!27m16!299174093m15!14m14!1m8!1m2!1y9289332842991173199!2y710933368375664684!2s%2Fg%2F11c5g_y2g8!4m2!1x355036036!2x3102216641!15sgcid%3Alaw_firm!2b0!3b0!6b0!8b0!9b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=91749",
+    "https://places.googleapis.com/$rpc/google.maps.places.v1.Places/GetPlace",
+    "https://fonts.gstatic.com/s/googlesanstext/v29/5aUu9-KzpRiLCAt4Unrc-xIKmCU5qEp2iw.woff2",
+    "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+    "https://fonts.gstatic.com/s/googlesanstext/v29/5aUp9-KzpRiLCAt4Unrc-xIKmCU5oLlVnmhjtg.woff2",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i11!2i345!3i807!4i256!2m1!1e1!3m12!2sen!3sUS!5e289!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i47083502&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=79035",
+    "https://maps.gstatic.com/mapfiles/transparent.png",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i20!2i176874!3i413542!4i256!2m1!1e1!3m12!2sen!3sUS!5e289!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i47083502&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=81305",
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i12!2i690!3i1615!4i256!2m1!1e1!3m12!2sen!3sUS!5e289!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i47083502&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=6585"
+  ],
+  "screenshots": [
+    "vehicle-accidents-dev_-1440.png",
+    "vehicle-accidents-dev_-768.png",
+    "vehicle-accidents-dev_-390.png",
+    "our-services-dev_-1440.png",
+    "our-services-dev_-768.png",
+    "our-services-dev_-390.png",
+    "blog_-1440.png",
+    "blog_-768.png",
+    "blog_-390.png",
+    "disclaimer_-1440.png",
+    "disclaimer_-768.png",
+    "disclaimer_-390.png",
+    "biography_-1440.png",
+    "biography_-768.png",
+    "biography_-390.png",
+    "industrial-accident_-1440.png",
+    "industrial-accident_-768.png",
+    "industrial-accident_-390.png",
+    "oilfield-accidents_-1440.png",
+    "oilfield-accidents_-768.png",
+    "oilfield-accidents_-390.png",
+    "vehicle-accidents_-1440.png",
+    "vehicle-accidents_-768.png",
+    "vehicle-accidents_-390.png",
+    "restraining-orders_-1440.png",
+    "restraining-orders_-768.png",
+    "restraining-orders_-390.png",
+    "child-support_-1440.png",
+    "child-support_-768.png",
+    "child-support_-390.png",
+    "child-visitations_-1440.png",
+    "child-visitations_-768.png",
+    "child-visitations_-390.png",
+    "child-custody_-1440.png",
+    "child-custody_-768.png",
+    "child-custody_-390.png",
+    "misdemeanors_-1440.png",
+    "misdemeanors_-768.png",
+    "misdemeanors_-390.png",
+    "felony-charges_-1440.png",
+    "felony-charges_-768.png",
+    "felony-charges_-390.png",
+    "dmv-hearings_-1440.png",
+    "dmv-hearings_-768.png",
+    "dmv-hearings_-390.png",
+    "dui-cases_-1440.png",
+    "dui-cases_-768.png",
+    "dui-cases_-390.png",
+    "defense-areas_-1440.png",
+    "defense-areas_-768.png",
+    "defense-areas_-390.png",
+    "contact-us_-1440.png",
+    "contact-us_-768.png",
+    "contact-us_-390.png",
+    "faqs_-1440.png",
+    "faqs_-768.png",
+    "faqs_-390.png",
+    "case-results_-1440.png",
+    "case-results_-768.png",
+    "case-results_-390.png",
+    "our-firm_-1440.png",
+    "our-firm_-768.png",
+    "our-firm_-390.png",
+    "home-1440.png",
+    "home-768.png",
+    "home-390.png",
+    "tis-season-not-drink-drive_-1440.png",
+    "tis-season-not-drink-drive_-768.png",
+    "tis-season-not-drink-drive_-390.png",
+    "thank-veterans-united-states_-1440.png",
+    "thank-veterans-united-states_-768.png",
+    "thank-veterans-united-states_-390.png",
+    "miranda-rights_-1440.png",
+    "miranda-rights_-768.png",
+    "miranda-rights_-390.png",
+    "arrested_-1440.png",
+    "arrested_-768.png",
+    "arrested_-390.png",
+    "introduction_-1440.png",
+    "introduction_-768.png",
+    "introduction_-390.png",
+    "category_scott-winkler-blog_-1440.png",
+    "category_scott-winkler-blog_-768.png",
+    "category_scott-winkler-blog_-390.png",
+    "category_uncategorized_-1440.png",
+    "category_uncategorized_-768.png",
+    "category_uncategorized_-390.png",
+    "2017_08_-1440.png",
+    "2017_08_-768.png",
+    "2017_08_-390.png",
+    "2017_09_-1440.png",
+    "2017_09_-768.png",
+    "2017_09_-390.png",
+    "2017_11_-1440.png",
+    "2017_11_-768.png",
+    "2017_11_-390.png",
+    "2017_12_-1440.png",
+    "2017_12_-768.png",
+    "2017_12_-390.png",
+    "author_theshafterlawyer007_-1440.png",
+    "author_theshafterlawyer007_-768.png",
+    "author_theshafterlawyer007_-390.png"
+  ],
+  "links": [
+    {
+      "href": "/",
+      "status": 200
+    },
+    {
+      "href": "/our-firm/",
+      "status": 200
+    },
+    {
+      "href": "/defense-areas/",
+      "status": 200
+    },
+    {
+      "href": "/dui-cases/",
+      "status": 200
+    },
+    {
+      "href": "/dmv-hearings/",
+      "status": 200
+    },
+    {
+      "href": "/felony-charges/",
+      "status": 200
+    },
+    {
+      "href": "/misdemeanors/",
+      "status": 200
+    },
+    {
+      "href": "/child-custody/",
+      "status": 200
+    },
+    {
+      "href": "/child-visitations/",
+      "status": 200
+    },
+    {
+      "href": "/child-support/",
+      "status": 200
+    },
+    {
+      "href": "/restraining-orders/",
+      "status": 200
+    },
+    {
+      "href": "/vehicle-accidents/",
+      "status": 200
+    },
+    {
+      "href": "/oilfield-accidents/",
+      "status": 200
+    },
+    {
+      "href": "/industrial-accident/",
+      "status": 200
+    },
+    {
+      "href": "/case-results/",
+      "status": 200
+    },
+    {
+      "href": "/faqs/",
+      "status": 200
+    },
+    {
+      "href": "/blog/",
+      "status": 200
+    },
+    {
+      "href": "/contact-us/",
+      "status": 200
+    },
+    {
+      "href": "/tis-season-not-drink-drive/",
+      "status": 200
+    },
+    {
+      "href": "/category/scott-winkler-blog/",
+      "status": 200
+    },
+    {
+      "href": "/thank-veterans-united-states/",
+      "status": 200
+    },
+    {
+      "href": "/miranda-rights/",
+      "status": 200
+    },
+    {
+      "href": "/arrested/",
+      "status": 200
+    },
+    {
+      "href": "/category/uncategorized/",
+      "status": 200
+    },
+    {
+      "href": "/introduction/",
+      "status": 200
+    },
+    {
+      "href": "/defense-areas",
+      "status": 308
+    },
+    {
+      "href": "/contact-us",
+      "status": 308
+    },
+    {
+      "href": "/biography/",
+      "status": 200
+    },
+    {
+      "href": "/disclaimer/",
+      "status": 200
+    },
+    {
+      "href": "/author/theshafterlawyer007/",
+      "status": 200
+    },
+    {
+      "href": "/tis-season-not-drink-drive/?share=twitter",
+      "status": 200
+    },
+    {
+      "href": "/tis-season-not-drink-drive/?share=facebook",
+      "status": 200
+    },
+    {
+      "href": "/2017/12/",
+      "status": 200
+    },
+    {
+      "href": "/2017/11/",
+      "status": 200
+    },
+    {
+      "href": "/2017/09/",
+      "status": 200
+    },
+    {
+      "href": "/2017/08/",
+      "status": 200
+    },
+    {
+      "href": "/feed/",
+      "status": 200
+    },
+    {
+      "href": "/comments/feed/",
+      "status": 200
+    },
+    {
+      "href": "/thank-veterans-united-states/?share=twitter",
+      "status": 200
+    },
+    {
+      "href": "/thank-veterans-united-states/?share=facebook",
+      "status": 200
+    },
+    {
+      "href": "/miranda-rights/?share=twitter",
+      "status": 200
+    },
+    {
+      "href": "/miranda-rights/?share=facebook",
+      "status": 200
+    },
+    {
+      "href": "/arrested/?share=twitter",
+      "status": 200
+    },
+    {
+      "href": "/arrested/?share=facebook",
+      "status": 200
+    },
+    {
+      "href": "/introduction/?share=twitter",
+      "status": 200
+    },
+    {
+      "href": "/introduction/?share=facebook",
+      "status": 200
+    }
+  ],
+  "forms": [
+    {
+      "expected": 400,
+      "status": 400
+    },
+    {
+      "expected": 400,
+      "status": 400
+    }
+  ],
+  "navigation": [
+    {
+      "mobileOpened": true,
+      "mobileLinks": 18,
+      "escapeClosed": true
+    }
+  ]
+}

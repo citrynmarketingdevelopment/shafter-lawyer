@@ -1,0 +1,7 @@
+{
+  "provider": "SMTP.com",
+  "checkedAt": "2026-10-27T18:19:00.336Z",
+  "httpStatus": 200,
+  "authenticated": true,
+  "configuredChannelFound": true
+}

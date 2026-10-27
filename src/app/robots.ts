@@ -1,14 +1,3 @@
-import type { MetadataRoute } from "next";
-import { isPreviewDeployment, SITE_URL } from "@/lib/seo";
-
-export default function robots(): MetadataRoute.Robots {
-  if (isPreviewDeployment()) {
-    return { rules: { userAgent: "*", disallow: "/" } };
-  }
-
-  return {
-    rules: { userAgent: "*", allow: "/", disallow: "/api/" },
-    sitemap: `${SITE_URL}/sitemap.xml`,
-    host: SITE_URL,
-  };
-}
+import type {MetadataRoute} from 'next';
+import {siteOrigin} from '@/lib/design-seo';
+export default function robots():MetadataRoute.Robots{const preview=process.env.VERCEL_ENV==='preview';return {rules:preview?{userAgent:'*',disallow:'/'}:{userAgent:'*',allow:'/',disallow:'/api/'},sitemap:preview?undefined:siteOrigin+'/sitemap.xml'}}

@@ -1,0 +1,10 @@
+migration/audit-2026-10-27/
+migration/source/
+migration/previous-implementation/
+tests/
+audit-sites.mjs
+
+migration/reference/
+migration/qa/
+migration/*.png
+migration/*.html

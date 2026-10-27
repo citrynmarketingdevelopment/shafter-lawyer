@@ -1,0 +1,16 @@
+{
+  "site": "shafter-lawyer",
+  "transport": "Mocked, no email sent",
+  "checks": [
+    {
+      "route": "/contact-us/",
+      "form": 0,
+      "loading": true,
+      "error": true,
+      "retry": true,
+      "success": true,
+      "reset": true
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,20 @@
+{
+  "time": "2026-10-27T18:58:11.023Z",
+  "mediaRedirect": {
+    "status": 301,
+    "target": "/assets/modules-f6205b572f.eot"
+  },
+  "unknownRouteStatus": 404,
+  "sitemapStatus": 200,
+  "sitemapUrls": 32,
+  "robotsStatus": 200,
+  "search": {
+    "legacyStatus": 301,
+    "legacyTarget": "/search/?s=miranda",
+    "resultsContainArticle": true
+  },
+  "feed": {
+    "status": 200,
+    "items": 5
+  }
+}

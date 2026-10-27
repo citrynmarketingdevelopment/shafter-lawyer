@@ -1,31 +1,15 @@
-# WordPress content migration
+# Current migration evidence
 
-The public source at <https://theshafterlawyer.com/> was captured on September 30, 2026. The Next.js application reads `src/data/site-content.json` and local images; it does not contact WordPress at runtime.
+The October 27, 2026 migration preserves the original WordPress layouts in the typed design-pages.json tree, local styles and assets. See ../README.md for the current implementation and ../../MIGRATION_REPORT.md for delivery status.
 
-- **22 published pages:** includes the two published legacy development URLs, `/our-services-dev/` and `/vehicle-accidents-dev/`.
-- **5 complete blog articles:** original publication dates and categories retained.
-- **7 archive URLs:** both categories, four monthly archives, and the author archive linked by the original site.
-- **86 local image files:** all public image media, including page backgrounds, logos, portraits, the case-stage diagrams, and the four local gallery photographs. The media library's unused `.mov` file was not downloaded; no published page embeds that video.
-- **7 FAQ answers:** complete source text retained as structured question-and-answer blocks.
+- ROUTES.md and routes.json: complete route inventory.
+- audit-2026-10-27/: current source HTML, WordPress API and asset discovery evidence.
+- reference/: all original route captures at 1440, 768 and 390 pixels.
+- qa/: final production application screenshots at the same widths.
+- comparison.html: route-by-route source/replacement comparison viewer.
+- browser-qa.json, verification.json, lighthouse-mobile.html: current validation.
+- local-assets.json: original URL to local asset mapping; also used by permanent redirects.
+- optimized-assets.json, responsive-backgrounds.json, optimized-fonts.json: preserved originals and optimized delivery variants.
+- mail-delivery-test.json and form-ui-qa.json: provider acceptance and mocked form-state tests; live Turnstile remains pending the public site key.
 
-`inventory.json` lists every migrated route and intentional cleanup. `validation.json` records the last content validation. `source/` contains the public REST responses and rendered source pages used for migration. These raw captures are audit material and are not served by Next.js.
-
-The migration removes WordPress/Divi scripts, style rules, duplicate desktop/mobile paragraphs, repeated global navigation/footer markup, contact form widgets, tracking markup, and social-sharing widgets. Page links point to the matching local routes, and images point to `/images/`. Original page-specific prose, case results, testimonials, lists, links, and FAQs remain in semantic content blocks. The UI supplies a new functional contact form and shared navigation.
-
-Obvious builder residue was cleaned: the vehicle-accident page's copied restraining-order heading, the defense directory's Lorem ipsum placeholder, and the FAQ page's unrelated business-consulting template list. The FAQ heading's trailing `Goes Here` placeholder was removed. Original versions remain in the raw captures. Legal descriptions were copied as source content, rather than rewritten or updated.
-
-The original site's contact page lists **422 James St.**, while its repeated footers and contact sections list **400 Central Valley Hwy**. The raw and migrated source captures preserve this discrepancy; the application uses its central site configuration for shared contact details.
-
-To repeat extraction using the saved source:
-
-```sh
-node scripts/migrate-source.mjs
-```
-
-To fetch a new public-source snapshot and redownload media:
-
-```sh
-node scripts/migrate-source.mjs --refresh
-```
-
-Review any intentional local content edits before rerunning: generated JSON files are replaced. This script only reads the public source; it does not write to or alter WordPress.
+The earlier September 30 inventory.json, validation.json, source/ and preserved implementation files are historical audit evidence. They are not the current visual implementation. Do not rerun old importers over current editorial changes. No source site or DNS records were modified.
