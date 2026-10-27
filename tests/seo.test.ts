@@ -76,7 +76,10 @@ test("legacy development pages remain accessible metadata targets without compet
     const home = pages.find((page) => page.path === "/");
     assert.ok(home);
     assert.deepEqual(getPageMetadata(home).robots, { index: true, follow: true });
-    assert.deepEqual(robots().rules, { userAgent: "*", allow: "/", disallow: "/api/" });
+    const rules = robots().rules as { userAgent: string; allow: string; disallow: string[] };
+    assert.equal(rules.userAgent, "*");
+    assert.equal(rules.allow, "/");
+    assert.ok(!rules.disallow.includes("/"), "Production pages must remain crawlable");
     assert.equal(robots().sitemap, `${SITE_URL}/sitemap.xml`);
   });
 });

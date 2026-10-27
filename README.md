@@ -15,7 +15,7 @@ Use Node.js 24 (see .nvmrc). Run `npm ci`, copy .env.example to .env.local for a
 
 ## Contact delivery and remaining launch requirement
 
-Contact submissions POST to /api/contact/ in the Node.js runtime. Delivery uses the existing **SMTP.com HTTPS API**, because the reference configuration provides SMTP_API and SMTP_CHANNEL rather than SMTP username/password credentials. A sender authenticated by that account, contactforms@citryn.com, is used. The visitor's address is Reply-To. This avoids spoofing each business's domain. Submissions go to **shafterlaw@gmail.com**.
+Contact submissions POST to /api/contact/ in the Node.js runtime. Delivery uses the existing **SMTP.com HTTPS API**, because the reference configuration provides SMTP_API and SMTP_CHANNEL rather than SMTP username/password credentials. A sender authenticated by that account, contactforms@citryn.com, is used. The visitor's address is Reply-To. Every submission also copies citryn.contactforms@gmail.com (CONTACT_CC), while retaining the site's existing recipient. This avoids spoofing each business's domain. Submissions go to **shafterlaw@gmail.com**.
 
 **The public Turnstile site key is still missing.** Forms fail closed until it is configured. The existing secret was copied privately, but its matching public key and hostname allowlist could not be inferred. Set the public key for the matching Cloudflare widget, allow the production hostname and www variant if used, and add the specific Vercel preview hostname used for testing. Then rebuild and verify a real browser challenge and inbox receipt. Do not ship Cloudflare's testing keys.
 
@@ -28,6 +28,7 @@ Contact submissions POST to /api/contact/ in the Node.js runtime. Delivery uses 
 | SMTP_CHANNEL | Active SMTP.com channel; server only |
 | SMTP_FROM | Authenticated sender; contactforms@citryn.com |
 | CONTACT_TO | shafterlaw@gmail.com |
+| CONTACT_CC | Additional recipient: citryn.contactforms@gmail.com |
 | CONTACT_ALLOWED_ORIGINS | Optional comma-separated exact additional origins; leave empty for normal production |
 
 Vercel's own VERCEL_URL and VERCEL_PROJECT_PRODUCTION_URL are recognized automatically. The API validates body size, fields, request origin, honeypot, Turnstile success, hostname and action. Turnstile's single-use tokens provide the primary replay protection. A bounded in-memory IP rate limit is supplementary and resets across serverless instances; use Vercel's platform rate controls if stronger global limits are needed. Errors never log credentials or submission contents. All provider calls have timeouts and no runtime filesystem access.
@@ -68,3 +69,9 @@ The implementation is compatible with [Vercel's Node.js runtime](https://vercel.
 - A copied restraining-order heading on the public vehicle-accident page was corrected to the page topic.
 
 No inaccessible required source assets were found. No PDFs were discovered among published links or the available media records. The WordPress installations must remain online until preview review, live Turnstile verification and recipient inbox checks are complete.
+
+## Crawl-control and mail-copy verification (October 27, 2026)
+
+robots.txt and sitemap.xml were compared with the live WordPress endpoints. Every indexable source URL remains; legacy development pages stay accessible with noindex and are intentionally excluded. Original source last-modified dates are preserved. See migration/crawl-controls/comparison.json and original-audit.json for exact differences. The new robots rules retain the source exclusions, block /api/, and point to a working HTTPS sitemap.
+
+CONTACT_CC=citryn.contactforms@gmail.com receives a copy of every form submission in addition to CONTACT_TO. One labeled test per site was sent through the actual contact handler and accepted by SMTP.com for both addresses. This local delivery harness simulates Cloudflare verification because the public widget Site Key is missing; it does not add a bypass to the deployed endpoint. Inbox receipt and a live browser challenge remain unconfirmed. See migration/contact-copy-delivery-test.json. To intentionally send another test, run npx tsx scripts/test-contact-delivery.ts; this sends a real email.

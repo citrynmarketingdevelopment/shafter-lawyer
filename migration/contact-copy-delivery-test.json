@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-27T19:50:33.473Z",
+  "site": "The Shafter Lawyer",
+  "to": "shafterlaw@gmail.com",
+  "cc": "citryn.contactforms@gmail.com",
+  "transport": "Actual SMTP.com HTTPS API through the application contact handler",
+  "turnstile": "Simulated within this local test harness only; live browser verification remains pending the public site key",
+  "inboxReceipt": "Not verified",
+  "smtpHttpStatus": 200,
+  "handlerStatus": 200,
+  "providerAccepted": true
+}

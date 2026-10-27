@@ -1,0 +1,69 @@
+{
+  "checkedAt": "2026-10-27T19:55:24.094Z",
+  "teamId": "team_03x1ngAC8mexBkAYzAJJnkMq",
+  "projectId": "prj_RJugVv3sdIWAHrAFZGE0whtZSNPq",
+  "project": "shafter-lawyer",
+  "environment": "production",
+  "verifiedVariables": [
+    {
+      "key": "NEXT_PUBLIC_SITE_URL",
+      "type": "plain",
+      "target": [
+        "production"
+      ]
+    },
+    {
+      "key": "TURNSTILE_SECRET_KEY",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ]
+    },
+    {
+      "key": "SMTP_API",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ]
+    },
+    {
+      "key": "SMTP_CHANNEL",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ]
+    },
+    {
+      "key": "SMTP_FROM",
+      "type": "plain",
+      "target": [
+        "production"
+      ]
+    },
+    {
+      "key": "CONTACT_TO",
+      "type": "plain",
+      "target": [
+        "production"
+      ]
+    },
+    {
+      "key": "CONTACT_CC",
+      "type": "plain",
+      "target": [
+        "production"
+      ]
+    },
+    {
+      "key": "CONTACT_ALLOWED_ORIGINS",
+      "type": "plain",
+      "target": [
+        "production"
+      ]
+    }
+  ],
+  "missingVariables": [
+    "NEXT_PUBLIC_TURNSTILE_SITE_KEY"
+  ],
+  "secretValuesIncluded": false
+}

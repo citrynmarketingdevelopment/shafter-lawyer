@@ -21,8 +21,8 @@ export function contactHandler(site:{name:string;origin:string;email:string},env
   if(!parsed.success||parsed.data.website)return response(false,'Please enter valid contact details, your message, and complete the security verification.',400);
   const data=parsed.data;
   if(data.kind==='inquiry'&&site.name!=='Foundation Properties Inc')return response(false,'Please include your name and message.',400);
-  const recipient=env.CONTACT_TO||site.email,from=env.SMTP_FROM||'contactforms@citryn.com';
-  if(!env.TURNSTILE_SECRET_KEY||!env.SMTP_API||!env.SMTP_CHANNEL||!z.email().safeParse(recipient).success||!z.email().safeParse(from).success)return response(false,'Online messages are currently unavailable. Please use the published contact details.',503);
+  const recipient=env.CONTACT_TO||site.email,copyRecipient=env.CONTACT_CC?.trim()||'citryn.contactforms@gmail.com',from=env.SMTP_FROM||'contactforms@citryn.com';
+  if(!env.TURNSTILE_SECRET_KEY||!env.SMTP_API||!env.SMTP_CHANNEL||!z.email().safeParse(recipient).success||!z.email().safeParse(copyRecipient).success||!z.email().safeParse(from).success)return response(false,'Online messages are currently unavailable. Please use the published contact details.',503);
   const ip=request.headers.get('x-vercel-forwarded-for')?.split(',')[0]?.trim()||request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()||'unknown';
   const rateKey=createHash('sha256').update(ip==='unknown'?data.email.toLowerCase():ip).digest('hex');
   if(!limit(rateKey))return response(false,'Please wait a few minutes before trying again.',429);
@@ -34,7 +34,7 @@ export function contactHandler(site:{name:string;origin:string;email:string},env
    if(env.NODE_ENV!=='production')hostnames.push('localhost','127.0.0.1');
    if(!result.success||result.action!=='contact'||!result.hostname||!hostnames.includes(result.hostname))return response(false,'Security verification failed or expired. Please complete it again.',400);
    const text=[`New ${site.name} website ${data.kind==='inquiry'?'real estate inquiry':'contact request'}`,'',`Name: ${data.name||'Not provided (email inquiry)'}`,`Email: ${data.email}`,`Phone: ${data.phone||'Not provided'}`,`Page: ${data.page}`,'','Message:',data.message||(data.kind==='inquiry'?'Please contact me about real estate services.':'No message provided.')].join('\n');
-   const sent=await fetcher('https://api.smtp.com/v4/messages',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json','X-SMTPCOM-API':env.SMTP_API},body:JSON.stringify({channel:env.SMTP_CHANNEL,recipients:{to:[{address:recipient}]},originator:{from:{name:site.name,address:from},reply_to:{address:data.email}},subject:`${site.name}: website ${data.kind==='inquiry'?'inquiry':'contact request'}`,body:{parts:[{type:'text/plain',charset:'UTF-8',content:text}]}}),signal:AbortSignal.timeout(15000)});
+   const sent=await fetcher('https://api.smtp.com/v4/messages',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json','X-SMTPCOM-API':env.SMTP_API},body:JSON.stringify({channel:env.SMTP_CHANNEL,recipients:{to:[{address:recipient}],...(copyRecipient.toLowerCase()!==recipient.toLowerCase()?{cc:[{address:copyRecipient}]}:{})},originator:{from:{name:site.name,address:from},reply_to:{address:data.email}},subject:`${site.name}: website ${data.kind==='inquiry'?'inquiry':'contact request'}`,body:{parts:[{type:'text/plain',charset:'UTF-8',content:text}]}}),signal:AbortSignal.timeout(15000)});
    if(!sent.ok)return response(false,'Your message could not be sent. Please try again or use the published contact details.',502);
    const mail=await sent.json() as {status?:string;data?:{msg_id?:string;message?:string}};
    if(mail.status!=='success'||!(mail.data?.msg_id||/^accepted,\s*msg_id:\s*[a-zA-Z0-9._-]+\s*$/i.test(mail.data?.message||'')))return response(false,'Your message could not be sent. Please try again.',502);

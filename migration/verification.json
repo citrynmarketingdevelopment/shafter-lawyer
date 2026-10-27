@@ -1,12 +1,12 @@
 {
-  "verifiedAt": "2026-10-27T19:03:03.261Z",
-  "buildId": "gJmQwEpdYyq0gCTm7ZGea",
+  "verifiedAt": "2026-10-27T19:55:25.104Z",
+  "buildId": "kz6OHeN7VhACQxMOZDE54",
   "stack": "Next.js 16.4.3, React 19, TypeScript, vanilla CSS, Node.js 24",
   "typecheck": "passed",
   "lint": "passed",
   "productionBuild": "passed",
   "unitTests": {
-    "passed": 36,
+    "passed": 42,
     "failed": 0
   },
   "productionDependencyVulnerabilities": 0,
@@ -38,7 +38,20 @@
     "smtpProviderAccepted": true,
     "recipient": "shafterlaw@gmail.com",
     "inboxReceipt": "not verified",
-    "liveTurnstile": "blocked: matching public site key missing; production/preview widget hostnames must be configured"
+    "liveTurnstile": "blocked: matching public site key missing; production/preview widget hostnames must be configured",
+    "additionalRecipient": "citryn.contactforms@gmail.com",
+    "copyDeliveryTest": {
+      "checkedAt": "2026-10-27T19:50:33.473Z",
+      "site": "The Shafter Lawyer",
+      "to": "shafterlaw@gmail.com",
+      "cc": "citryn.contactforms@gmail.com",
+      "transport": "Actual SMTP.com HTTPS API through the application contact handler",
+      "turnstile": "Simulated within this local test harness only; live browser verification remains pending the public site key",
+      "inboxReceipt": "Not verified",
+      "smtpHttpStatus": 200,
+      "handlerStatus": 200,
+      "providerAccepted": true
+    }
   },
   "lighthouseMobile": {
     "performance": 96,
@@ -60,5 +73,14 @@
       "Missing public Turnstile site key and hostname verification",
       "Recipient inbox receipt not independently confirmed"
     ]
+  },
+  "productionEnvironment": {
+    "configured": true,
+    "evidence": "migration/production-env-verification.json",
+    "missingPublicTurnstileKey": true
+  },
+  "crawlControls": {
+    "sourceComparison": "migration/crawl-controls/comparison.json",
+    "missingPublicSourceUrls": 0
   }
 }

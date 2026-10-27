@@ -1,0 +1,72 @@
+{
+  "checkedAt": "2026-10-27T19:42:29.029Z",
+  "origin": "https://theshafterlawyer.com",
+  "robots": {
+    "status": 200,
+    "text": "User-agent: *\r\nDisallow: /wp-admin/\r\nDisallow: /*?s=*/\r\n\r\nSitemap: https://theshafterlawyer.com/sitemap_index.xml"
+  },
+  "sitemaps": [
+    {
+      "url": "https://theshafterlawyer.com/sitemap_index.xml",
+      "status": 404,
+      "recognized": false
+    },
+    {
+      "url": "https://theshafterlawyer.com/sitemap.xml",
+      "status": 200,
+      "recognized": true
+    },
+    {
+      "url": "https://theshafterlawyer.com/wp-sitemap-posts-post-1.xml",
+      "status": 200,
+      "recognized": true
+    },
+    {
+      "url": "https://theshafterlawyer.com/wp-sitemap-posts-page-1.xml",
+      "status": 200,
+      "recognized": true
+    },
+    {
+      "url": "https://theshafterlawyer.com/wp-sitemap-taxonomies-category-1.xml",
+      "status": 200,
+      "recognized": true
+    },
+    {
+      "url": "https://theshafterlawyer.com/wp-sitemap.xml",
+      "status": 200,
+      "recognized": true
+    }
+  ],
+  "urls": [
+    "https://theshafterlawyer.com/",
+    "https://theshafterlawyer.com/arrested/",
+    "https://theshafterlawyer.com/biography/",
+    "https://theshafterlawyer.com/blog/",
+    "https://theshafterlawyer.com/case-results/",
+    "https://theshafterlawyer.com/category/scott-winkler-blog/",
+    "https://theshafterlawyer.com/category/uncategorized/",
+    "https://theshafterlawyer.com/child-custody/",
+    "https://theshafterlawyer.com/child-support/",
+    "https://theshafterlawyer.com/child-visitations/",
+    "https://theshafterlawyer.com/contact-us/",
+    "https://theshafterlawyer.com/defense-areas/",
+    "https://theshafterlawyer.com/disclaimer/",
+    "https://theshafterlawyer.com/dmv-hearings/",
+    "https://theshafterlawyer.com/dui-cases/",
+    "https://theshafterlawyer.com/faqs/",
+    "https://theshafterlawyer.com/felony-charges/",
+    "https://theshafterlawyer.com/industrial-accident/",
+    "https://theshafterlawyer.com/introduction/",
+    "https://theshafterlawyer.com/miranda-rights/",
+    "https://theshafterlawyer.com/misdemeanors/",
+    "https://theshafterlawyer.com/oilfield-accidents/",
+    "https://theshafterlawyer.com/our-firm/",
+    "https://theshafterlawyer.com/our-services-dev/",
+    "https://theshafterlawyer.com/restraining-orders/",
+    "https://theshafterlawyer.com/thank-veterans-united-states/",
+    "https://theshafterlawyer.com/tis-season-not-drink-drive/",
+    "https://theshafterlawyer.com/vehicle-accidents-dev/",
+    "https://theshafterlawyer.com/vehicle-accidents/"
+  ],
+  "errors": []
+}

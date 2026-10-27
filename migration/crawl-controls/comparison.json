@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-27T19:51:30.477Z",
+  "originalSitemapUrls": 29,
+  "replacementSitemapUrls": 32,
+  "missingPublicSourceUrls": [],
+  "intentionallyExcluded": [
+    "https://theshafterlawyer.com/our-services-dev/",
+    "https://theshafterlawyer.com/vehicle-accidents-dev/"
+  ],
+  "additionalIndexableArchives": [
+    "https://theshafterlawyer.com/2017/08/",
+    "https://theshafterlawyer.com/2017/09/",
+    "https://theshafterlawyer.com/2017/11/",
+    "https://theshafterlawyer.com/2017/12/",
+    "https://theshafterlawyer.com/author/theshafterlawyer007/"
+  ],
+  "originalRobots": "User-agent: *\r\nDisallow: /wp-admin/\r\nDisallow: /*?s=*/\r\n\r\nSitemap: https://theshafterlawyer.com/sitemap_index.xml",
+  "changes": [
+    "Preserve source crawl exclusions; disallow the new contact API.",
+    "Advertise one working HTTPS sitemap; redirect old sitemap endpoints.",
+    "Preserve source modification dates and omit noindex legacy development pages."
+  ]
+}
